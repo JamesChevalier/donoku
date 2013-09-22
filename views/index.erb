@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="small-12 columns">
+    <h1><a href="<%= settings.homepage %>"><%= settings.site_name %></a> <small><%= settings.subheader %></small></h1>
+  </div>
+</div>
+
+<% unless settings.statement.empty? %>
+  <div class="row">
+    <div class="small-12 large-8 columns large-centered">
+      <p><%= settings.statement %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="small-12 large-4 columns large-centered">
+    <form action="/donate" method="post">
+      <ul class="pricing-table">
+        <li class="title">Donate</li>
+        <li class="price">
+          <select name="price">
+            <option value=<%= settings.price1 * 100 %>>$<%= settings.price1 %></option>
+            <option value=<%= settings.price2 * 100 %>>$<%= settings.price2 %></option>
+            <option value=<%= settings.price3 * 100 %>>$<%= settings.price3 %></option>
+          </select>
+          <input name="email" type="email" placeholder="Email Address">
+        </li>
+        <li class="description"><%= settings.reason %></li>
+        <li class="bullet-item">$<%= "#{settings.price1} #{settings.price1_value}" %></li>
+        <li class="bullet-item">$<%= "#{settings.price2} #{settings.price2_value}" %></li>
+        <li class="bullet-item">$<%= "#{settings.price3} #{settings.price3_value}" %></li>
+        <li class="cta-button"><script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= settings.publishable_key %>" data-name="<%= settings.site_name %>" data-description="Donation" data-currency="usd" data-image="<%= settings.image_link %>"></script></li>
+      </ul>
+    </form>
+  </div>
+</div>
