@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'rack/ssl-enforcer'
 require 'stripe'
-require 'airbrake'
 use Rack::SslEnforcer, except_hosts: /127.0.0.1$/
 
 set :publishable_key, ENV['STRIPE_PUBLISHABLE_KEY']
