@@ -1,3 +1,5 @@
+require 'coveralls'
+Coveralls.wear!
 ENV['RACK_ENV'] = 'test'
 require_relative '../app'
 require 'minitest/autorun'
