@@ -1,5 +1,9 @@
 # Donoku
 
+[![Build Status](https://travis-ci.org/JamesChevalier/donoku.png)](https://travis-ci.org/JamesChevalier/donoku)
+[![Code Climate](https://codeclimate.com/github/JamesChevalier/donoku.png)](https://codeclimate.com/github/JamesChevalier/donoku)
+[![Coverage Status](https://coveralls.io/repos/JamesChevalier/donoku/badge.png)](https://coveralls.io/r/JamesChevalier/donoku)
+
 A simple Heroku-ready Sinatra-based app to collect donations via Stripe. This app forces an SSL connection outside of the Development environment.
 
 ## Configuration
