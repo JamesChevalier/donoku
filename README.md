@@ -10,7 +10,7 @@ A simple Heroku-ready Sinatra-based app to collect donations via Stripe. This ap
 
 * Set `ENV['STRIPE_PUBLISHABLE_KEY']` to your Stripe account's Publishable Key
 * Set `ENV['STRIPE_SECRET_KEY']` to your Stripe account's Secret Key
-* Edit lines 11 through 24 in `app.rb`
+* Edit lines 10 through 23 in `app.rb`
 * Follow the steps [here](http://kb.mailchimp.com/article/how-can-i-add-my-signup-form-on-my-website#embedform) to get your MailChimp embed form. You should use the 'Naked' version of MailChimp's form.
 * Paste that code into the `views/mailchimp.erb` file.
 
