@@ -23,13 +23,23 @@
             <option value=<%= settings.price2 * 100 %>>$<%= settings.price2 %></option>
             <option value=<%= settings.price3 * 100 %>>$<%= settings.price3 %></option>
           </select>
-          <input name="email" type="email" placeholder="Email Address">
         </li>
         <li class="description"><%= settings.reason %></li>
         <li class="bullet-item">$<%= "#{settings.price1} #{settings.price1_value}" %></li>
         <li class="bullet-item">$<%= "#{settings.price2} #{settings.price2_value}" %></li>
         <li class="bullet-item">$<%= "#{settings.price3} #{settings.price3_value}" %></li>
-        <li class="cta-button"><script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= settings.publishable_key %>" data-name="<%= settings.site_name %>" data-description="Donation" data-currency="usd" data-image="<%= settings.image_link %>"></script></li>
+        <li class="cta-button">
+          <script src="https://checkout.stripe.com/checkout.js"
+                  class="stripe-button"
+                  data-currency="usd"
+                  data-description="Donation"
+                  data-image="<%= settings.image_link %>"
+                  data-key="<%= settings.publishable_key %>"
+                  data-label="Donate"
+                  data-name="<%= settings.site_name %>"
+                  data-panel-label="Donate">
+          </script>
+        </li>
       </ul>
     </form>
   </div>

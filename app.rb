@@ -28,7 +28,9 @@ end
 
 post '/donate' do
   @params  = params
-  customer = Stripe::Customer.create(email: params[:email], description: params[:description], card: params[:stripeToken])
+  customer = Stripe::Customer.create(email: params[:stripeEmail],
+                                     description: params[:description],
+                                     card: params[:stripeToken])
   Stripe::Charge.create(amount: params[:price], description: 'Donoku Charge', currency: 'usd', customer: customer)
   erb :donate
 end
