@@ -1,7 +1,6 @@
 notification :off
 
 guard :shell do
-
   watch(/^spec\/(.+\.rb)$/) do |file|
     system "clear"
     puts "Running spec: #{file[1]}"
@@ -30,5 +29,4 @@ guard :shell do
     puts "Running all specs"
     system "bundle exec rake test"
   end
-
 end
