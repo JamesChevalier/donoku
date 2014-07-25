@@ -13,6 +13,6 @@ end
 
 group :test do
   gem 'minitest'
-  gem 'rack-test', :require => 'rack/test'
+  gem 'rack-test', require: 'rack/test'
   gem 'rake'
 end
